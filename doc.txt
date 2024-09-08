@@ -1,0 +1,14 @@
+#Package
+npm install node-pg-migrate
+
+# Create table 'notes'
+npm run migrate create "create table notes"
+
+# Run migration
+npm run migrate up
+
+# Generate secret token
+require('crypto').randomBytes(64).toString('hex');
+
+# Add constraint DB
+npm run migrate create "add foreign key to owner column"
